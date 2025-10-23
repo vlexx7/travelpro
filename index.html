@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Travel Pro Plus — START NOW</title>
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#00b894;--glass:rgba(255,255,255,0.04)}
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial}
+    body{background:linear-gradient(180deg,#051020 0%, var(--bg) 100%);display:flex;align-items:center;justify-content:center;color:#e6eef6}
+    .fade-in{opacity:0;animation:fadeIn 1.5s ease forwards}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));padding:36px;border-radius:18px;box-shadow:0 10px 30px rgba(2,6,23,0.6);width:min(720px,94vw);text-align:center}
+    h1{margin:0 0 12px;font-size:22px;letter-spacing:0.6px}
+    p.lead{margin:0 0 18px;color:rgba(230,238,246,0.9);font-size:15px}
+    ul.services{padding:0;margin:0 0 20px 0;list-style:none}
+    ul.services li{display:flex;gap:12px;align-items:center;justify-content:center;flex-direction:column;padding:10px 0;border-top:1px solid rgba(255,255,255,0.02)}
+    ul.services li:first-child{border-top:none}
+    .icon{width:34px;height:34px;flex:0 0 34px;border-radius:8px;display:inline-grid;place-items:center;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01))}
+    .svc-title{font-weight:700;margin:0;font-size:15px}
+    .svc-desc{margin:4px 0 0;color:rgba(230,238,246,0.75);font-size:14px;max-width:600px}
+    .btn-wrap{text-align:center;margin-top:18px}
+    .btn{display:inline-flex;gap:12px;align-items:center;justify-content:center;padding:14px 28px;border-radius:12px;border:0;cursor:pointer;font-weight:800;font-size:15px;letter-spacing:0.6px;background:linear-gradient(90deg,var(--accent),#00d19a);color:#02211a;box-shadow:0 8px 22px rgba(0,183,148,0.18);transition:transform .12s ease,box-shadow .12s ease}
+    .btn:active{transform:translateY(1px)}
+    .small{display:block;margin-top:12px;color:rgba(230,238,246,0.6);font-size:13px;text-align:center}
+    .pulse{position:relative}
+    .pulse::after{content:"";position:absolute;inset:-6px;border-radius:14px;filter:blur(10px);opacity:0;transition:opacity .25s ease}
+    .btn:hover{transform:translateY(-4px);box-shadow:0 18px 34px rgba(0,183,148,0.22)}
+    .btn:hover + .pulse::after{opacity:0.6;background:radial-gradient(circle at 20% 20%, rgba(0,183,148,0.12), transparent 20%)}
+    img.banner{width:100%;border-radius:12px;margin-bottom:20px}
+    @media (max-width:600px){.card{padding:20px}}
+  </style>
+</head>
+<body>
+  <div class="card fade-in" role="region" aria-label="Travel Pro Plus call-to-action">
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" alt="Travel Pro Plus banner" class="banner">
+    <h1>Travel Pro Plus — Travel and Earn Money</h1>
+    <p class="lead">Financial freedom while enjoying unique experiences on flights, cruises, hotels, and resorts. Explore everything you can do, earn, and transform with us.</p>
+
+    <ul class="services">
+      <li>
+        <div class="icon">✈️</div>
+        <div>
+          <div class="svc-title">1. Travel & Lodging Bookings</div>
+          <div class="svc-desc">Travel with preferential rates and exclusive experiences. Access accommodations, vehicles, and activities in 20+ countries. Our platform connects local hosts with savvy travelers — no intermediaries or hidden fees.</div>
+        </div>
+      </li>
+
+      <li>
+        <div class="icon">🚗</div>
+        <div>
+          <div class="svc-title">2. P2P Vehicle Rentals</div>
+          <div class="svc-desc">Drive or rent directly between users. Connect with vehicle owners in your city or destination — earn as a host or save as a traveler. Everything managed from your TravelProPlus account.</div>
+        </div>
+      </li>
+
+      <li>
+        <div class="icon">💸</div>
+        <div>
+          <div class="svc-title">3. Daily Passive Income</div>
+          <div class="svc-desc">Earn up to 2% daily (Monday to Friday). Activate your membership and start generating income without needing referrals — the system works for you, wherever you are.</div>
+        </div>
+      </li>
+
+      <li>
+        <div class="icon">🤝</div>
+        <div>
+          <div class="svc-title">4. Multi-Level Compensation Plan</div>
+          <div class="svc-desc">Build your network and unlock powerful bonuses. Receive direct, indirect, binary, weekly, residual, and performance-based commissions. Rise through the ranks and access monthly leadership salaries.</div>
+        </div>
+      </li>
+    </ul>
+
+    <div class="btn-wrap">
+      <a href="https://travelpro.plus/register/VLexx/left" target="_blank" rel="noopener noreferrer">
+        <button class="btn" type="button" aria-label="Start now — open registration">START NOW</button>
+      </a>
+      <div class="pulse" aria-hidden="true"></div>
+      <div class="small">This button will open the Travel Pro Plus registration page in a new tab.</div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelector('.btn').addEventListener('click', function(){
+      try{ if(window.dataLayer) window.dataLayer.push({event:'tp_start_click'}); }catch(e){}
+    });
+  </script>
+</body>
+</html>
